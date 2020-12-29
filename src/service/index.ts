@@ -1,6 +1,8 @@
-import {runData} from "./data.fixture.ts"
-const service = {
-    getRunData(){
+import {runData} from "./data.fixture"
+
+
+const service: IService = {
+    async getRunData(){
         return Promise.resolve(runData)
     }
 }

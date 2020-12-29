@@ -1,15 +1,17 @@
-
 import { reactive } from "vue"
-import service from "../service/index.ts"
+import service from "../service/index"
 
-const store = {
-    state: reactive({}),
-    async getRunData(){
-        const data = await service.getRunData()
-        console.log(data)
-    }
+function formatAsRunData(data: { records: Array<RunDataDTO> }) {
+  return data.records.map((record) => record.fields)
 }
-
-
+const store: IStore = {
+  state: reactive({
+    runData: [],
+  }),
+  async fetchData() {
+    const data = await service.getRunData()
+    this.state.runData = formatAsRunData(data)
+  },
+}
 
 export default store

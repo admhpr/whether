@@ -1,22 +1,20 @@
 <template>
-  <div class="flex justify-center">
-    <img  alt="Vue logo" src="./assets/logo.png">
-  </div>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <section class="flex justify-center">
+    <img alt="Vue logo" src="./assets/logo.png">
+  </section>
+  <Main msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import store from "./store/index.ts"
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Main from './components/Main.vue';
+
+export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
-  },
-  mounted(){
-    store.getRunData()
+    Main
   }
-}
+});
 </script>
 
 <style>

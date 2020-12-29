@@ -30,13 +30,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+<script lang="ts">
+import { onMounted } from 'vue'
+import store from '../store'
+  export default {
+    name: 'Main',
+    props: {
+      msg: String,
+    },
+    setup() {
+      onMounted(() => {
+        store.fetchData()
+      })
+      return {
+      }
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
