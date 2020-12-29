@@ -1,7 +1,7 @@
 import { reactive } from "vue"
 import service from "../service/index"
 
-function formatAsRunData(data: { records: Array<RunDataDTO> }) {
+function formatAsRunData(data: RunDataPayload) {
   return data.records.map((record) => record.fields)
 }
 const store: IStore = {

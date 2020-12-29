@@ -1,3 +1,3 @@
 interface IService {
-  getRunData(): Promise<any>
+  getRunData(): Promise<RunDataPayload>
 }
