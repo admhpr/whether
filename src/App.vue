@@ -7,11 +7,14 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import store from "./store/index.ts"
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted(){
+    store.getRunData()
   }
 }
 </script>
