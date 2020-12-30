@@ -1,20 +1,20 @@
 <template>
   <section class="flex justify-center">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
   </section>
-  <Main msg="Welcome to Your Vue.js + TypeScript App"/>
+  <Dashboard />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Main from './components/Main.vue';
+import { defineComponent } from "vue"
+import Dashboard from "./components/Dashboard.vue"
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    Main
-  }
-});
+    Dashboard,
+  },
+})
 </script>
 
 <style>
