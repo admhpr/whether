@@ -1,3 +1,4 @@
+import { WindDirection } from "../types/enums"
 export const runData = {
   records: [
     {
@@ -35,7 +36,7 @@ export const runData = {
         wind_speed: 12,
         precipitation: 1,
         temperature: 23,
-        wind_direction: WindDirection.S,
+        wind_direction: WindDirection.N,
         run_duration: 50,
         run_distance: 10,
         avg_km: 93,

@@ -5,16 +5,7 @@ type RunDataDTO = {
   createdTime: string
   fields: RunDataFields
 }
-enum WindDirection {
-  N = "N",
-  S = "S",
-  E = "E",
-  W = "W",
-  NE = "NE",
-  NW = "NW",
-  SE = "SE",
-  SW = "SW",
-}
+
 
 type RunDataFields = {
   avg_km: number
