@@ -1,6 +1,7 @@
-const lat = 58.7984
-const lng = 17.8081
-const params = "waveHeight,airTemperature"
+// ballyholme beach
+const lat = 54.66633
+const lng = -5.63669
+const params = "waveHeight,airTemperature,windDirection"
 
 export default {
   baseUrl: `https://api.stormglass.io/v2`,

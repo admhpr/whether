@@ -1,7 +1,7 @@
 interface IStore {
   state: {
     runData: RunDataRecords
-    weatherConditions: Weather
+    weatherConditions: WeatherDataRecords
   }
   fetchData(): void
 }

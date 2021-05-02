@@ -37,4 +37,4 @@ type RunDataFields = {
 }
 
 type RunDataRecords = Array<RunDataFields>
-type RunDataRecords = Array<WeatherDataDTO>
+type WeatherDataRecords = Array<WeatherDataDTO>
