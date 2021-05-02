@@ -1,6 +1,6 @@
 <template>
   <section>
-    <pre>{{ state.runData }}</pre>
+    <pre>{{ state.weatherConditions }}</pre>
     <InfoCard
       :key="runRecord.id"
       v-for="runRecord in state.runData"

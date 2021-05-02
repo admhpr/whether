@@ -7,10 +7,13 @@ function formatAsRunData(data: RunDataPayload) {
 const store: IStore = {
   state: reactive({
     runData: [],
+    weatherConditions: [],
   }),
   async fetchData() {
-    const data = await service.getRunData()
-    this.state.runData = formatAsRunData(data)
+    const runData = await service.getRunData()
+    const weatherConditions = await service.getWeatherConditions()
+    this.state.runData = formatAsRunData(runData)
+    this.state.weatherConditions = weatherConditions
   },
 }
 
