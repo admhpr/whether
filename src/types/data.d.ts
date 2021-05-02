@@ -1,4 +1,5 @@
 type RunDataPayload = { records: Array<RunDataDTO> }
+type WeatherDataPayload = { data: Array<WeatherDataDTO>; meta: WeatherMetaDTO }
 
 type RunDataDTO = {
   id: string
@@ -6,6 +7,23 @@ type RunDataDTO = {
   fields: RunDataFields
 }
 
+type WeatherDataDTO = {
+  time: string
+  airTemperature: {
+    smhi: string
+  }
+  waveHeight: {
+    noaa: number
+    meteo: number
+  }
+}
+
+type WeatherMetaDTO = {
+  dailyQuota: number
+  lat: number
+  lng: number
+  requestCount: number
+}
 
 type RunDataFields = {
   avg_km: number
